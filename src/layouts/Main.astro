@@ -1,0 +1,132 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Nav from "../components/Nav/index";
+interface Props {
+    title: string;
+    description: string;
+    image?: string;
+    next?: string;
+    prev?: string;
+    canonicalURL?: string;
+}
+const { title, description, image, next, prev, canonicalURL } =
+    Astro.props as Props;
+import "../styles/global.css";
+---
+
+<html lang="en">
+    <head>
+        <title>{title}</title>
+        <MainHead
+            title={title}
+            description={description}
+            image={image}
+            next={next}
+            prev={prev}
+            canonicalURL={canonicalURL}
+        />
+    </head>
+
+    <body>
+        <Nav client:load />
+        <div id="swup" class="transition-fade">
+            <slot />
+        </div>
+        <script>
+            import Swup from "swup";
+            import SwupFadeTheme from "@swup/fade-theme";
+            const swup = new Swup({
+                plugins: [new SwupFadeTheme()],
+            });
+        </script>
+
+        <script>
+            import { gsap } from "gsap";
+            import { ScrollTrigger } from "gsap/ScrollTrigger";
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.timeline()
+                .from("#compare-start", {
+                    scrollTrigger: {
+                        trigger: "#compare-start",
+                        start: "center center",
+                        endTrigger: "#compare-end",
+                        end: () => {
+                            const height = window.innerHeight * 2;
+                            const chartHeight =
+                                document.querySelector(
+                                    "#compare-start"
+                                )?.clientHeight;
+                            if (chartHeight && chartHeight > height) {
+                                return "center center";
+                            } else {
+                                return "bottom center";
+                            }
+                            // return `bottom ${chartHeight + (height - chartHeight) / 2}px`;
+                        },
+                        scrub: true,
+                        pin: true,
+                        pinSpacing: false,
+                    },
+                })
+                .fromTo(
+                    "#webpage",
+                    { visibility: "hidden" },
+                    {
+                        visibility: "visible",
+                        scrollTrigger: {
+                            trigger: "#compare-start",
+                            start: "center center",
+                            scrub: true,
+                        },
+                    }
+                )
+                .fromTo(
+                    "#spinner",
+                    { visibility: "hidden" },
+                    {
+                        visibility: "visible",
+                        scrollTrigger: {
+                            trigger: "#compare-start",
+                            start: "center center",
+                            scrub: true,
+                        },
+                    }
+                )
+                .fromTo(
+                    "#webpage1",
+                    { visibility: "hidden" },
+                    {
+                        visibility: "visible",
+                        scrollTrigger: {
+                            markers: true,
+                            trigger: "#spinner",
+                            start: "top -200",
+                            end: "top -200",
+                            scrub: true,
+                        },
+                    }
+                );
+
+            // ScrollTrigger.create({
+            //     trigger: "#compare-start",
+            //     endTrigger: "#compare-end",
+            //     start: "center center",
+            //     markers: true,
+            //     end: () => {
+            //         const height = window.innerHeight;
+            //         const chartHeight =
+            //             document.querySelector("#compare-start")?.clientHeight;
+            //         if (chartHeight && chartHeight > height) {
+            //             return "center center";
+            //         } else {
+            //             return "bottom center";
+            //         }
+            //         // return `bottom ${chartHeight + (height - chartHeight) / 2}px`;
+            //     },
+            //     pin: true,
+            //     pinSpacing: false,
+            // });
+        </script>
+    </body>
+</html>

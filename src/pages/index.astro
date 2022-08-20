@@ -1,0 +1,156 @@
+---
+import Hero from "../components/HomePage/Hero/Hero.astro";
+import Layout from "../layouts/Main.astro";
+import { Icon } from "astro-icon";
+---
+
+<Layout
+	title="Beanlea Web Development"
+	description="Beanlea Web Development - based in Cairns, Australia"
+>
+	<Hero />
+	<div class="h-[350vh]">
+		<section
+			id="compare-start"
+			class="w-full flex items-start justify-center"
+		>
+			<div
+				id="pinned-element1"
+				class="h-[150vh] flex items-center justify-center w-full py-auto"
+			>
+				<div class="flex flex-col items-center justify-center w-full">
+					<h1 class="text-center text-4xl pb-8 w-1/4">
+						Websites don't need to be slow, it's 2022, let's use
+						modern tech
+					</h1>
+					<div
+						class="flex items-center justify-center mx-auto space-x-4"
+					>
+						<div
+							class="border border-white w-64 h-64 sm:w-96 sm:h-96 flex flex-col items-center justify-start rounded-t-md bg-white"
+						>
+							<div
+								class="w-full h-8 border border-white rounded-t-md"
+							>
+								<div
+									class="w-full h-full bg-white rounded-t-md"
+								>
+									<div
+										class="flex h-full items-start justify-between"
+									>
+										<div class="flex space-x-1">
+											<div
+												class="h-2.5 w-2.5 bg-slate-300 rounded-full"
+											>
+											</div>
+											<div
+												class="h-2.5 w-2.5 bg-slate-300 rounded-full"
+											>
+											</div>
+											<div
+												class="h-2.5 w-2.5 bg-slate-300 rounded-full"
+											>
+											</div>
+										</div>
+
+										<div
+											class="h-1/2 w-4/5 bg-white border border-slate-300 rounded-xl mt-3"
+										>
+										</div>
+									</div>
+									<div
+										class="flex w-full h-full items-center justify-start"
+									>
+									</div>
+								</div>
+							</div>
+							<div
+								class="relative flex items-center justify-center w-full h-full dark:bg-slate-900"
+							>
+								<div
+									id="webpage1"
+									class="absolute top-0 left-0 w-full h-full bg-blue-700 z-10"
+								>
+								</div>
+								<svg
+									id="spinner"
+									class="animate-spin spinner -ml-1 mr-3 h-5 w-5 text-white"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+								>
+									<circle
+										class="opacity-25"
+										cx="12"
+										cy="12"
+										r="10"
+										stroke="currentColor"
+										stroke-width="4"></circle>
+									<path
+										class="opacity-75"
+										fill="currentColor"
+										d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+									></path>
+								</svg>
+							</div>
+						</div>
+
+						<div
+							class="border border-white w-64 h-64 sm:w-96 sm:h-96 flex flex-col items-center justify-start rounded-t-md bg-white"
+						>
+							<div
+								class="w-full h-8 border border-white rounded-t-md"
+							>
+								<div
+									class="w-full h-full bg-white rounded-t-md"
+								>
+									<div
+										class="flex h-full items-start justify-between"
+									>
+										<div class="flex space-x-1">
+											<div
+												class="h-2.5 w-2.5 bg-slate-300 rounded-full"
+											>
+											</div>
+											<div
+												class="h-2.5 w-2.5 bg-slate-300 rounded-full"
+											>
+											</div>
+											<div
+												class="h-2.5 w-2.5 bg-slate-300 rounded-full"
+											>
+											</div>
+										</div>
+
+										<div
+											class="h-1/2 w-4/5 bg-white border border-slate-300 rounded-xl mt-3"
+										>
+										</div>
+									</div>
+									<div
+										class="flex w-full h-full items-center justify-start"
+									>
+									</div>
+								</div>
+							</div>
+							<div
+								class="flex items-center justify-center w-full h-full dark:bg-slate-900"
+							>
+								<div
+									id="webpage"
+									class="w-full h-full bg-slate-900"
+								>
+									<img
+										src="/assets/page.jpg"
+										class="aspect-auto"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="compare-end"></div>
+	</div>
+</Layout>
