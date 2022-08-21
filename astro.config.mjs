@@ -8,9 +8,9 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   output: "server",
   adapter: vercel(),
-  vite: {
-    ssr: {
-      external: ["svgo"],
-    },
-  },
+  // vite: {
+  //   ssr: {
+  //     external: ["svgo"],
+  //   },
+  // },
 });
