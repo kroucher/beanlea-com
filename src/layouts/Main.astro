@@ -35,14 +35,21 @@ import "../styles/global.css";
         <script>
             import Swup from "swup";
             import SwupFadeTheme from "@swup/fade-theme";
+            import SwupHeadPlugin from "@swup/head-plugin";
             const swup = new Swup({
-                plugins: [new SwupFadeTheme()],
+                plugins: [
+                    new SwupFadeTheme(),
+                    new SwupHeadPlugin({
+                        persistAssets: true,
+                    }),
+                ],
             });
         </script>
 
         <script>
             import { gsap } from "gsap";
             import { ScrollTrigger } from "gsap/ScrollTrigger";
+
             gsap.registerPlugin(ScrollTrigger);
 
             gsap.timeline()
@@ -124,6 +131,19 @@ import "../styles/global.css";
                     { visibility: "hidden" },
                     {
                         visibility: "visible",
+                        scrollTrigger: {
+                            trigger: "#compare-start",
+                            start: "center 300",
+                            end: "center 300",
+                            scrub: true,
+                        },
+                    }
+                )
+                .fromTo(
+                    "#scroll-marker",
+                    { visibility: "visible" },
+                    {
+                        visibility: "hidden",
                         scrollTrigger: {
                             trigger: "#compare-start",
                             start: "center 300",

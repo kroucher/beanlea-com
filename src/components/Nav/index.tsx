@@ -54,7 +54,7 @@ export default function Nav() {
   console.log(scrollDirection);
   return (
     <div
-      className={`sticky z-50 h-max  ${
+      className={`sticky z-50 h-max overflow-x-hidden  ${
         scrollDirection === "down"
           ? "-top-24 transition-all duration-700"
           : "top-0 transition-all duration-700"
@@ -80,7 +80,7 @@ export default function Nav() {
                 </span>
               </div>
               <div className="hidden sm:block sm:ml-6">
-                <div className="flex items-center justify-center space-x-4 w-full h-full">
+                <div className="flex items-center justify-center space-x-2 lg:space-x-4 w-full h-full">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
