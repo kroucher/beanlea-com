@@ -8,8 +8,10 @@ specifiers:
   '@fontsource/kumar-one': ^4.5.8
   '@headlessui/react': ^1.6.6
   '@heroicons/react': ^1.0.6
+  '@hookform/resolvers': ^2.9.7
   '@nanostores/persistent': ^0.6.0
   '@nanostores/react': ^0.3.0
+  '@sendgrid/mail': ^7.7.0
   '@swup/fade-theme': ^1.0.5
   '@swup/head-plugin': ^1.2.1
   '@swup/scripts-plugin': ^1.1.0
@@ -28,6 +30,7 @@ specifiers:
   prettier-plugin-astro: ^0.5.0
   react: ^18.0.0
   react-dom: ^18.0.0
+  react-hook-form: ^7.34.2
   react-particles: ^2.2.2
   react-spinners: ^0.13.4
   react-tsparticles: ^2.2.2
@@ -36,13 +39,16 @@ specifiers:
   scrollmagic: ^2.0.8
   swup: 2.0.14
   tsparticles: ^2.2.2
+  zod: ^3.18.0
 
 dependencies:
   '@astrojs/vercel': 1.0.0
   '@fontsource/kumar-one': 4.5.8
   '@heroicons/react': 1.0.6_react@18.2.0
+  '@hookform/resolvers': 2.9.7_react-hook-form@7.34.2
   '@nanostores/persistent': 0.6.0_nanostores@0.6.0
   '@nanostores/react': 0.3.0_resngft2y545aodfc4fe35fzvu
+  '@sendgrid/mail': 7.7.0
   '@swup/head-plugin': 1.2.1
   '@swup/scripts-plugin': 1.1.0
   '@swup/slide-theme': 1.0.5
@@ -52,6 +58,7 @@ dependencies:
   gsap: 3.11.0
   nanostores: 0.6.0
   preact: 10.10.4
+  react-hook-form: 7.34.2_react@18.2.0
   react-particles: 2.2.2_react@18.2.0
   react-spinners: 0.13.4_biqbaboplfbrettd7655fr4n2y
   react-tsparticles: 2.2.2_react@18.2.0
@@ -59,6 +66,7 @@ dependencies:
   scrollmagic: 2.0.8
   swup: 2.0.14
   tsparticles: 2.2.2
+  zod: 3.18.0
 
 devDependencies:
   '@astrojs/preact': 1.0.2_preact@10.10.4
@@ -521,6 +529,14 @@ packages:
       react: 18.2.0
     dev: false
 
+  /@hookform/resolvers/2.9.7_react-hook-form@7.34.2:
+    resolution: {integrity: sha512-BloehX3MOLwuFEwT4yZnmolPjVmqyn8VsSuodLfazbCIqxBHsQ4qUZsi+bvNNCduRli1AGWFrkDLGD5QoNzsoA==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.34.2_react@18.2.0
+    dev: false
+
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
     engines: {node: '>=6.0.0'}
@@ -700,6 +716,33 @@ packages:
       '@proload/core': 0.3.2
       tsm: 2.2.2
     dev: true
+
+  /@sendgrid/client/7.7.0:
+    resolution: {integrity: sha512-SxH+y8jeAQSnDavrTD0uGDXYIIkFylCo+eDofVmZLQ0f862nnqbC3Vd1ej6b7Le7lboyzQF6F7Fodv02rYspuA==}
+    engines: {node: 6.* || 8.* || >=10.*}
+    dependencies:
+      '@sendgrid/helpers': 7.7.0
+      axios: 0.26.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@sendgrid/helpers/7.7.0:
+    resolution: {integrity: sha512-3AsAxfN3GDBcXoZ/y1mzAAbKzTtUZ5+ZrHOmWQ279AuaFXUNCh9bPnRpN504bgveTqoW+11IzPg3I0WVgDINpw==}
+    engines: {node: '>= 6.0.0'}
+    dependencies:
+      deepmerge: 4.2.2
+    dev: false
+
+  /@sendgrid/mail/7.7.0:
+    resolution: {integrity: sha512-5+nApPE9wINBvHSUxwOxkkQqM/IAAaBYoP9hw7WwgDNQPxraruVqHizeTitVtKGiqWCKm2mnjh4XGN3fvFLqaw==}
+    engines: {node: 6.* || 8.* || >=10.*}
+    dependencies:
+      '@sendgrid/client': 7.7.0
+      '@sendgrid/helpers': 7.7.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /@swup/fade-theme/1.0.5:
     resolution: {integrity: sha512-9PwC7UmW0RZ5eda+JtWz0z0H3kWWW4Ir3fnEnQOLwdS5p+nrvrLGQM3WjUR/kFIuAsU6K40Ty99gtoW6spWYSA==}
@@ -1095,6 +1138,14 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
+  /axios/0.26.1:
+    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
+    dependencies:
+      follow-redirects: 1.15.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /babel-plugin-module-resolver/4.1.0:
     resolution: {integrity: sha512-MlX10UDheRr3lb3P0WcaIdtCSRlxdQsB1sBqL7W0raF070bGl1HQQq5K3T2vf2XAYie+ww+5AKC/WrkjRO2knA==}
     engines: {node: '>= 8.0.0'}
@@ -1435,7 +1486,6 @@ packages:
   /deepmerge/4.2.2:
     resolution: {integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /defaults/1.0.3:
     resolution: {integrity: sha512-s82itHOnYrN0Ib8r+z7laQz3sdE+4FP3d9Q7VLO7U+KRT+CR0GsWuyHxzdAY82I7cXv0G/twrqomTJLOssO5HA==}
@@ -1909,6 +1959,16 @@ packages:
       micromatch: 4.0.5
       pkg-dir: 4.2.0
     dev: true
+
+  /follow-redirects/1.15.1:
+    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
 
   /formdata-polyfill/4.0.10:
     resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
@@ -3566,6 +3626,15 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
 
+  /react-hook-form/7.34.2_react@18.2.0:
+    resolution: {integrity: sha512-1lYWbEqr0GW7HHUjMScXMidGvV0BE2RJV3ap2BL7G0EJirkqpccTaawbsvBO8GZaB3JjCeFBEbnEWI1P8ZoLRQ==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-particles/2.2.2_react@18.2.0:
     resolution: {integrity: sha512-5cRygxmMUCBrCGkyQXhMhmpOiXVhGMHxmani3VOVQ5Iuu/VyXOqOeKpoKlgzXBEChxPg+T8NzMXi7av3beoPCg==}
     requiresBuild: true
@@ -4876,7 +4945,6 @@ packages:
 
   /zod/3.18.0:
     resolution: {integrity: sha512-gwTm8RfUCe8l9rDwN5r2A17DkAa8Ez4Yl4yXqc5VqeGaXaJahzYYXbTwvhroZi0SNBqTwh/bKm2N0mpCzuw4bA==}
-    dev: true
 
   /zwitch/2.0.2:
     resolution: {integrity: sha512-JZxotl7SxAJH0j7dN4pxsTV6ZLXoLdGME+PsjkL/DaBrVryK9kTGq06GfKrwcSOqypP+fdXGoCHE36b99fWVoA==}

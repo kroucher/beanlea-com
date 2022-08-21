@@ -29,8 +29,10 @@
     "@astrojs/vercel": "^1.0.0",
     "@fontsource/kumar-one": "^4.5.8",
     "@heroicons/react": "^1.0.6",
+    "@hookform/resolvers": "^2.9.7",
     "@nanostores/persistent": "^0.6.0",
     "@nanostores/react": "^0.3.0",
+    "@sendgrid/mail": "^7.7.0",
     "@swup/head-plugin": "^1.2.1",
     "@swup/scripts-plugin": "^1.1.0",
     "@swup/slide-theme": "^1.0.5",
@@ -40,12 +42,14 @@
     "gsap": "^3.11.0",
     "nanostores": "^0.6.0",
     "preact": "^10.7.3",
+    "react-hook-form": "^7.34.2",
     "react-particles": "^2.2.2",
     "react-spinners": "^0.13.4",
     "react-tsparticles": "^2.2.2",
     "rellax": "^1.12.1",
     "scrollmagic": "^2.0.8",
     "swup": "2.0.14",
-    "tsparticles": "^2.2.2"
+    "tsparticles": "^2.2.2",
+    "zod": "^3.18.0"
   }
 }
