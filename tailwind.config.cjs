@@ -7,6 +7,10 @@ module.exports = {
       fontFamily: {
         kumar: ["Kumar One", "sans-serif"],
       },
+      backgroundImage: {
+        cheekco: "url('/assets/showcase/cheekco.png')",
+        praxislawyers: "url('/assets/showcase/praxislawyers.jpg')",
+      },
     },
   },
   plugins: [],

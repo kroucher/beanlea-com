@@ -8,7 +8,7 @@ export type ExtractProps<T> = T extends ComponentType<infer P> ? P : T;
 const navigation = [
   { name: "Home", href: "/", current: true },
   { name: "About Us", href: "/about", current: false },
-  { name: "Projects", href: "/projects", current: false },
+  { name: "Showcase", href: "/showcase", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
 
