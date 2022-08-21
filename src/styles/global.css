@@ -12,7 +12,7 @@
   }
 
   html > is-animating {
-    @apply opacity-0 transform transition-opacity duration-200 ease-out;
+    @apply opacity-0 transform transition-opacity duration-[0] ease-out;
   }
 
   /*
