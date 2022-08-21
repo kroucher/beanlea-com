@@ -1,5 +1,5 @@
 import { Disclosure } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline/esm";
 import { useStore } from "@nanostores/react";
 import { isMenuOpen } from "../../stores/menuStore";
 

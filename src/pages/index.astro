@@ -27,7 +27,7 @@ import { Icon } from "astro-icon";
 						class="flex items-center justify-center mx-auto space-x-4"
 					>
 						<div
-							class="border border-white w-64 h-64 sm:w-96 sm:h-96 flex flex-col items-center justify-start rounded-t-md bg-white"
+							class="border border-white w-64 h-40 sm:w-96 sm:h-64 flex flex-col items-center justify-start rounded-t-md bg-white"
 						>
 							<div
 								class="w-full h-8 border border-white rounded-t-md"
@@ -67,14 +67,80 @@ import { Icon } from "astro-icon";
 							<div
 								class="relative flex items-center justify-center w-full h-full dark:bg-slate-900"
 							>
-								<div
-									id="webpage1"
-									class="absolute top-0 left-0 w-full h-full bg-blue-700 z-10"
+								<!-- <div
+									id="page-left"
+									class="absolute top-0 left-0 w-1/2 h-full bg-slate-900 z-30"
 								>
 								</div>
+								<div
+									id="page-right"
+									class="absolute top-0 right-0 w-1/2 h-full bg-slate-900 z-30"
+								>
+								</div> -->
+								<img
+									id="slow-page"
+									src="/assets/page.jpg"
+									class="aspect-auto absolute top-0 left-0 z-30"
+								/>
+								<div
+									id="nav"
+									class="absolute top-0 left-0 w-full flex items-center justify-between h-3 bg-slate-900 shadow-sm shadow-slate-800 z-20"
+								>
+									<div
+										class="flex items-center justify-center space-x-1 pl-16"
+									>
+										<span class="text-[8px] text-blue-400"
+											>{`</>`}
+										</span>
+										<div
+											class="flex items-center justify-center flex-col"
+										>
+											<span
+												class="text-[6px] font-kumar text-slate-50/80"
+												>{`Beanlea`}
+											</span>
+											<span
+												class="text-[4px] -mt-1 pl-1.5"
+												>Web Development
+											</span>
+										</div>
+									</div>
+
+									<div
+										class="flex items-center justify-center space-x-3 pr-20"
+									>
+										<div
+											class="text-[3px] text-slate-50/70"
+										>
+											Home
+										</div>
+										<div
+											class="text-[3px] text-slate-50/70"
+										>
+											About
+										</div>
+										<div
+											class="text-[3px] text-slate-50/70"
+										>
+											Projects
+										</div>
+										<div
+											class="text-[3px] text-slate-50/70"
+										>
+											Contact
+										</div>
+									</div>
+								</div>
+
+								<div
+									id="webpage1"
+									class="absolute top-0 left-0 w-full h-full bg-slate-900 z-10"
+								>
+								</div>
+
 								<svg
 									id="spinner"
-									class="animate-spin spinner -ml-1 mr-3 h-5 w-5 text-white"
+									class="animate-spin spinner -ml-1 mr-3 h-5 w-5 text-slate-900 dark:text-slate-50/70 z-10"
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
 									viewBox="0 0 24 24"
@@ -96,7 +162,7 @@ import { Icon } from "astro-icon";
 						</div>
 
 						<div
-							class="border border-white w-64 h-64 sm:w-96 sm:h-96 flex flex-col items-center justify-start rounded-t-md bg-white"
+							class="border border-white w-64 h-40 sm:w-96 sm:h-64 flex flex-col items-center justify-start rounded-t-md bg-white"
 						>
 							<div
 								class="w-full h-8 border border-white rounded-t-md"
@@ -134,12 +200,62 @@ import { Icon } from "astro-icon";
 								</div>
 							</div>
 							<div
-								class="flex items-center justify-center w-full h-full dark:bg-slate-900"
+								class="flex items-center justify-center w-full h-full dark:bg-slate-900 relative"
 							>
 								<div
 									id="webpage"
 									class="w-full h-full bg-slate-900"
 								>
+									<div
+										id="nav"
+										class="absolute top-0 left-0 w-full flex items-center justify-between h-3 bg-slate-900 shadow-sm shadow-slate-800"
+									>
+										<div
+											class="flex items-center justify-center space-x-1 pl-16"
+										>
+											<span
+												class="text-[8px] text-blue-400"
+												>{`</>`}
+											</span>
+											<div
+												class="flex items-center justify-center flex-col"
+											>
+												<span
+													class="text-[6px] font-kumar text-slate-50/80"
+													>{`Beanlea`}
+												</span>
+												<span
+													class="text-[4px] -mt-1 pl-1.5"
+													>Web Development
+												</span>
+											</div>
+										</div>
+
+										<div
+											class="flex items-center justify-center space-x-3 pr-20"
+										>
+											<div
+												class="text-[3px] text-slate-50/70"
+											>
+												Home
+											</div>
+											<div
+												class="text-[3px] text-slate-50/70"
+											>
+												About
+											</div>
+											<div
+												class="text-[3px] text-slate-50/70"
+											>
+												Projects
+											</div>
+											<div
+												class="text-[3px] text-slate-50/70"
+											>
+												Contact
+											</div>
+										</div>
+									</div>
 									<img
 										src="/assets/page.jpg"
 										class="aspect-auto"

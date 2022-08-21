@@ -1,4 +1,4 @@
-import { MoonIcon, SunIcon } from "@heroicons/react/outline";
+import { MoonIcon, SunIcon } from "@heroicons/react/outline/esm";
 import { useStore } from "@nanostores/react";
 import { useEffect } from "react";
 import { theme } from "../../stores/themeStore";

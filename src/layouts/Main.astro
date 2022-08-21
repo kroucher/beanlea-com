@@ -58,9 +58,9 @@ import "../styles/global.css";
                                     "#compare-start"
                                 )?.clientHeight;
                             if (chartHeight && chartHeight > height) {
-                                return "center center";
+                                return "center top";
                             } else {
-                                return "bottom center";
+                                return "bottom top";
                             }
                             // return `bottom ${chartHeight + (height - chartHeight) / 2}px`;
                         },
@@ -94,39 +94,44 @@ import "../styles/global.css";
                     }
                 )
                 .fromTo(
-                    "#webpage1",
+                    "#nav",
                     { visibility: "hidden" },
                     {
                         visibility: "visible",
                         scrollTrigger: {
-                            markers: true,
-                            trigger: "#spinner",
-                            start: "top -200",
-                            end: "top -200",
+                            trigger: "#compare-start",
+                            start: "top 0",
+                            end: "top 0",
+                            scrub: true,
+                        },
+                    }
+                )
+                .fromTo(
+                    "#spinner",
+                    { visibility: "visible" },
+                    {
+                        visibility: "hidden",
+                        scrollTrigger: {
+                            trigger: "#compare-start",
+                            start: "top 250",
+                            end: "top 250",
+                            scrub: true,
+                        },
+                    }
+                )
+                .fromTo(
+                    "#slow-page",
+                    { visibility: "hidden" },
+                    {
+                        visibility: "visible",
+                        scrollTrigger: {
+                            trigger: "#compare-start",
+                            start: "center 300",
+                            end: "center 300",
                             scrub: true,
                         },
                     }
                 );
-
-            // ScrollTrigger.create({
-            //     trigger: "#compare-start",
-            //     endTrigger: "#compare-end",
-            //     start: "center center",
-            //     markers: true,
-            //     end: () => {
-            //         const height = window.innerHeight;
-            //         const chartHeight =
-            //             document.querySelector("#compare-start")?.clientHeight;
-            //         if (chartHeight && chartHeight > height) {
-            //             return "center center";
-            //         } else {
-            //             return "bottom center";
-            //         }
-            //         // return `bottom ${chartHeight + (height - chartHeight) / 2}px`;
-            //     },
-            //     pin: true,
-            //     pinSpacing: false,
-            // });
         </script>
     </body>
 </html>

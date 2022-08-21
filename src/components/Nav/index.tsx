@@ -1,10 +1,6 @@
 import { ComponentType, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { SunIcon, MoonIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-import { useStore } from "@nanostores/react";
-
 import MobileMenuButton from "./MobileMenuButton";
-import MobileMenuDropdown from "./MobileMenu";
 import ThemeButton from "./ThemeButton";
 
 export type ExtractProps<T> = T extends ComponentType<infer P> ? P : T;
