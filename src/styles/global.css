@@ -12,7 +12,7 @@
   }
 
   html > is-animating {
-    @apply opacity-0 transform transition-opacity duration-[0] ease-out;
+    @apply opacity-0;
   }
 
   /*
@@ -29,20 +29,9 @@
   } */
   .background-animate {
     background-size: 400%;
-
     -webkit-animation: AnimationName 3s ease infinite;
     -moz-animation: AnimationName 3s ease infinite;
     animation: GradientTransition 3s ease infinite;
-  }
-
-  @keyframes FadeIn {
-    from {
-      opacity: 0;
-      duration: 0.4s;
-    }
-    to {
-      opacity: 1;
-    }
   }
 
   @keyframes GradientTransition {
