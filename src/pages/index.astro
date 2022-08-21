@@ -1,10 +1,9 @@
 ---
 import Hero from "../components/HomePage/Hero/Hero.astro";
 import Layout from "../layouts/Main.astro";
-import PricingPage from "../components/HomePage/Pricing/PricingPage";
-import FeaturesPage from "../components/HomePage/Features/Features";
-import Testimonials from "../components/HomePage/Testimonials/Testimonials";
-import Footer from "../components/Footer/index";
+import PricingPage from "../components/HomePage/Pricing/PricingPage.astro";
+import FeaturesPage from "../components/HomePage/Features/Features.astro";
+import Testimonials from "../components/HomePage/Testimonials/Testimonials.astro";
 ---
 
 <Layout
@@ -12,6 +11,9 @@ import Footer from "../components/Footer/index";
 	description="Beanlea Web Development - based in Cairns, Australia"
 >
 	<Hero />
+	<FeaturesPage />
+	<Testimonials />
+	<PricingPage />
 	<!-- <div class="h-[200vh] md:h-[150vh] relative w-full pt-16 md:pt-0">
 		<section
 			id="compare-start"
@@ -222,7 +224,4 @@ import Footer from "../components/Footer/index";
 	>
 		<ChevronDownIcon className="w-6 h-6" />
 	</div> -->
-	<FeaturesPage client:visible />
-	<Testimonials client:visible />
-	<PricingPage client:visible />
 </Layout>
