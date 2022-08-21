@@ -1,10 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
-import {
-  FireIcon,
-  GlobeAltIcon,
-  PencilIcon,
-  DeviceMobileIcon,
-} from "@heroicons/react/outline";
+import FireIcon from "@heroicons/react/outline/esm/FireIcon";
+import GlobeAltIcon from "@heroicons/react/outline/esm/GlobeAltIcon";
+import PencilIcon from "@heroicons/react/outline/esm/PencilIcon";
+import DeviceMobileIcon from "@heroicons/react/outline/esm/DeviceMobileIcon";
 
 const features = [
   {

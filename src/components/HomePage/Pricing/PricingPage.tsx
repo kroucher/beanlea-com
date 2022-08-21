@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { CheckIcon } from "@heroicons/react/outline";
+import CheckIcon from "@heroicons/react/outline/esm/CheckIcon";
 
 const basicFeatures = [
   "1-20 static pages",
