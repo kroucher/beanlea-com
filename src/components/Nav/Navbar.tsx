@@ -70,7 +70,10 @@ export default function Nav() {
               <MobileMenuButton />
             </div>
             <div className="flex items-center justify-center sm:items-stretch sm:justify-between w-full">
-              <div className="flex flex-col items-center justify-center dark:text-slate-50 text-slate-900 -mt-0.5 sm:mr-20">
+              <a
+                href="/"
+                className="flex flex-col items-center justify-center dark:text-slate-50 text-slate-900 -mt-0.5 sm:mr-20"
+              >
                 <div className="flex items-center justify-center">
                   <h1 className="font-mono text-2xl sm:text-3xl -mb-3 mx-2.5 text-blue-400">{`</>`}</h1>
                   <h1 className="font-kumar text-xl sm:text-3xl pt-1.5 sm:pt-3">{`Beanlea`}</h1>
@@ -78,7 +81,7 @@ export default function Nav() {
                 <span className="text-xs sm:text-sm -mt-2.5 -mr-20 sm:-mt-3 sm:-mr-12 font-semibold">
                   Web Development
                 </span>
-              </div>
+              </a>
               <div className="hidden sm:block sm:ml-6">
                 <div className="flex items-center justify-center space-x-2 lg:space-x-4 w-full h-full">
                   {navigation.map((item) => (
