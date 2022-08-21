@@ -1,6 +1,4 @@
 import { Menu, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline/esm";
-import { useStore } from "@nanostores/react";
 import { Fragment } from "react";
 import type { ExtractProps } from ".";
 
