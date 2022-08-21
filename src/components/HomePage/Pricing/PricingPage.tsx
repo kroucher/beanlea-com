@@ -19,16 +19,16 @@ const ecommerceFeatures = [
 
 export default function PricingPage() {
   return (
-    <div className="bg-gray-900 pt-16">
+    <div className="bg-neutral-100 dark:bg-slate-900 pt-16">
       <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
         <div className="text-center">
-          <h2 className="text-xl leading-6 font-semibold text-gray-300">
+          <h2 className="text-xl leading-6 font-semibold text-slate-700 dark:text-neutral-300">
             Pricing
           </h2>
-          <p className="mt-2 text-3xl tracking-tight font-bold text-white sm:text-4xl sm:tracking-tight lg:text-5xl lg:tracking-tight">
+          <p className="mt-2 text-3xl tracking-tight font-bold text-slate-900 dark:text-neutral-100 sm:text-4xl sm:tracking-tight lg:text-5xl lg:tracking-tight">
             The right price for you, no matter how complex your website is.
           </p>
-          <p className="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
+          <p className="mt-3 max-w-4xl mx-auto text-xl text-slate-700 dark:text-neutral-300 sm:mt-5 sm:text-2xl">
             From single page websites to e-commerce platforms with all the bells
             and whistles, we have you covered.
           </p>
@@ -37,7 +37,7 @@ export default function PricingPage() {
 
       <div className="mt-16 bg-neutral-100 dark:bg-slate-500 pb-12 lg:mt-20 lg:pb-20">
         <div className="relative z-0">
-          <div className="absolute inset-0 h-5/6 bg-gray-900 lg:h-2/3" />
+          <div className="absolute inset-0 h-5/6 bg-neutral-200 dark:bg-slate-900 lg:h-2/3" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative lg:grid lg:grid-cols-7">
               <div className="mx-auto max-w-md lg:mx-0 lg:max-w-none lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3">
@@ -103,7 +103,7 @@ export default function PricingPage() {
                   />
                   <div className="absolute inset-x-0 top-0 transform translate-y-px">
                     <div className="flex justify-center transform -translate-y-1/2">
-                      <span className="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-base font-semibold text-white">
+                      <span className="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-base font-semibold text-slate-900 dark:text-neutral-100">
                         E-Commerce
                       </span>
                     </div>
@@ -149,7 +149,7 @@ export default function PricingPage() {
                       <div className="rounded-lg shadow-md">
                         <a
                           href="#"
-                          className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-700"
+                          className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-slate-900 dark:text-neutral-100 hover:bg-indigo-700"
                           aria-describedby="tier-growth"
                         >
                           Request a quote

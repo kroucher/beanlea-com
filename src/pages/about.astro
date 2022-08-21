@@ -8,15 +8,13 @@ import ParticlesPage from "../components/About/Particles";
 	description="Beanlea Web Development - based in Cairns, Australia"
 >
 	<div
-		class="flex flex-col w-full items-center justify-start min-h-[100vh] relative"
+		class="flex flex-col w-full items-center justify-start min-h-screen relative"
 	>
-		<div
-			class="absolute top-0 bottom-0 right-0 left-0 h-[100vh] w-full -z-10"
-		>
+		<div class="absolute top-0 bottom-0 right-0 left-0 h-full w-full -z-10">
 			<ParticlesPage client:load />
 		</div>
 		<div
-			class="w-full flex items-center h-32 bg-neutral-100 dark:bg-slate-900 shadow-xl mt-10"
+			class="w-full flex items-center h-32 bg-neutral-100 dark:bg-slate-900 shadow-xl mt-10 select-none"
 		>
 			<span
 				class="text-3xl pl-3 sm:text-center w-full font-thin tracking-wider"
@@ -28,7 +26,7 @@ import ParticlesPage from "../components/About/Particles";
 		</div>
 
 		<div
-			class="flex flex-col items-center justify-center space-y-10 text-base sm:text-lg sm:max-w-4xl mx-auto mt-10 bg-neutral-100 dark:bg-slate-900 rounded-md p-10"
+			class="flex flex-col items-center justify-center space-y-10 text-base sm:text-lg sm:max-w-4xl mx-auto mt-10 mb-32 bg-neutral-100 dark:bg-slate-900 rounded-md p-10 select-none"
 		>
 			<p class="p-3 text-left sm:text-center">
 				Beanlea Web Development is located in sunny Cairns, Queensland.

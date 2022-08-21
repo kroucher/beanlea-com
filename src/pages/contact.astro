@@ -1,8 +1,10 @@
 ---
 import Layout from "../layouts/Main.astro";
+import ContactPage from "../components/ContactPage/Contact";
 ---
 
 <Layout
     title="Contact Us - Beanlea Web Development"
     description="Beanlea Web Development - based in Cairns, Australia"
-/>
+    ><ContactPage client:load />
+</Layout>
