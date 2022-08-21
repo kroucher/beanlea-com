@@ -131,6 +131,19 @@ import "../styles/global.css";
                             scrub: true,
                         },
                     }
+                )
+                .fromTo(
+                    "#scroll-marker",
+                    { visibility: "visible" },
+                    {
+                        visibility: "hidden",
+                        scrollTrigger: {
+                            trigger: "#compare-start",
+                            start: "center 300",
+                            end: "center 300",
+                            scrub: true,
+                        },
+                    }
                 );
         </script>
     </body>
