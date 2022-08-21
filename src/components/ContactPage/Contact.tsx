@@ -1,4 +1,5 @@
-import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
+import MailIcon from "@heroicons/react/outline/esm/MailIcon";
+import PhoneIcon from "@heroicons/react/outline/esm/PhoneIcon";
 
 const plans = [
   {
