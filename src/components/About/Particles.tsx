@@ -1,26 +1,25 @@
 import { Particles } from "react-particles";
 import { loadFull } from "tsparticles";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 const ParticlesPage = () => {
-  const particlesInit = useCallback(async (engine: any) => {
+  const particlesInit = async (engine: any) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
-  }, []);
+  };
 
-  const particlesLoaded = useCallback(async (container: any) => {
-    await console.log(container);
-  }, []);
+  //   const particlesLoaded = useCallback(async (container: any) => {
+  //     await console.log(container);
+  //   }, []);
 
   return (
     <Particles
       className="h-full w-full"
       id="tsparticles"
-      init={particlesInit}
-      loaded={particlesLoaded}
+      init={(engine: any) => particlesInit(engine)}
       options={{
         background: {
           color: {
