@@ -1,6 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import type { ExtractProps } from ".";
+import type { ExtractProps } from "./Navbar";
 
 function NavMenu(props: ExtractProps<typeof Menu>) {
   // add your own logic here

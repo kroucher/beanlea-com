@@ -1,13 +1,13 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Button from '../components/Button/index.jsx';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '../components/Nav/index.jsx';
+import MainHead from "../components/MainHead.astro";
+import Button from "../components/Button/index.jsx";
+import Footer from "../components/Footer/index.jsx";
+import Nav from "../components/Nav/Navbar";
 
 const { content } = Astro.props;
 ---
 
-<html lang={content.lang || 'en'}>
+<html lang={content.lang || "en"}>
 	<head>
 		<MainHead title={content.title} description={content.description} />
 		<style lang="scss">
@@ -68,7 +68,7 @@ const { content } = Astro.props;
 		</style>
 	</head>
 	<body>
-		<Nav client:load/>
+		<Nav client:load />
 		<header class="hero">
 			<h1 class="title">{content.title}</h1>
 		</header>
