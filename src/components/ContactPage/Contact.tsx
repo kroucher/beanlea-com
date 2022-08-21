@@ -1,5 +1,6 @@
 import MailIcon from "@heroicons/react/outline/esm/MailIcon";
 import PhoneIcon from "@heroicons/react/outline/esm/PhoneIcon";
+import { useEffect } from "react";
 
 const plans = [
   {
@@ -20,6 +21,14 @@ const plans = [
 ];
 
 export default function ContactPage() {
+  const onSubmit = async () => {
+    const result = await fetch("/api/submit-form", {
+      method: "GET",
+    });
+    const message = await result.json();
+    console.log(message);
+  };
+
   return (
     <div className="relative bg-neutral-100 dark:bg-slate-900 ">
       <div className="absolute inset-0">
@@ -61,7 +70,7 @@ export default function ContactPage() {
         </div>
         <div className="bg-neutral-100 dark:bg-slate-900 py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12 text-slate-900">
           <div className="max-w-lg mx-auto lg:max-w-none">
-            <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
+            <form className="grid grid-cols-1 gap-y-6">
               <div>
                 <label htmlFor="full-name" className="sr-only">
                   Full name
@@ -149,7 +158,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={onSubmit}
                   className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-slate-900 bg-blue-400 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
                 >
                   Submit
