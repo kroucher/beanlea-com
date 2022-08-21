@@ -7,26 +7,6 @@
     @apply dark:bg-slate-900 bg-neutral-100 dark:text-neutral-100 text-slate-900 transition-colors duration-200 ease-in-out;
   }
 
-  transition-fade {
-    @apply opacity-100 transform transition-opacity duration-200 ease-in;
-  }
-
-  html > is-animating {
-    @apply opacity-0;
-  }
-
-  /*
-		Animate page transitions with plain JS & CSS
-		https://swup.js.org/
-	*/
-  /* .transition-fade {
-    -webkit-animation: fadein 0.5s;
-    transition: 0.4s;
-    opacity: 1;
-  } */
-  /* html.is-animating .transition-fade {
-    opacity: 0;
-  } */
   .background-animate {
     background-size: 400%;
     -webkit-animation: AnimationName 3s ease infinite;

@@ -49,7 +49,7 @@ export default function PricingPage() {
                           className="text-center text-2xl font-medium text-gray-900"
                           id="tier-hobby"
                         >
-                          Basic
+                          Small Business
                         </h3>
                         <div className="mt-4 flex items-center justify-center">
                           <span className="px-3 flex items-start text-6xl tracking-tight text-gray-900">

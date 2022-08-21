@@ -38,9 +38,12 @@
     "gsap": "^3.11.0",
     "nanostores": "^0.6.0",
     "preact": "^10.7.3",
+    "react-particles": "^2.2.2",
     "react-spinners": "^0.13.4",
+    "react-tsparticles": "^2.2.2",
     "rellax": "^1.12.1",
     "scrollmagic": "^2.0.8",
-    "swup": "2.0.14"
+    "swup": "2.0.14",
+    "tsparticles": "^2.2.2"
   }
 }

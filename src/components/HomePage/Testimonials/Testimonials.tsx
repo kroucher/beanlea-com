@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 export default function Testimonials() {
   return (
-    <section className="py-12 dark:bg-slate-600 bg-blue-100 overflow-hidden md:py-20 lg:py-24">
+    <section className="py-12 dark:bg-slate-600 bg-blue-100 overflow-hidden md:py-20 lg:py-24 drop-shadow-[0_1px_15px_rgba(1,183,214,0.8)] rounded-3xl mx-3 mb-10">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           <img
@@ -32,7 +32,7 @@ export default function Testimonials() {
                   </div>
 
                   <svg
-                    className="hidden md:block mx-1 h-5 w-5 text-indigo-600"
+                    className="hidden md:block mx-1 h-5 w-5 text-blue-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >

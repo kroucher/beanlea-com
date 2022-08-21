@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer";
 import MainHead from "../components/MainHead.astro";
 import Nav from "../components/Nav/index";
 interface Props {
@@ -27,11 +28,13 @@ import "../styles/global.css";
         />
     </head>
 
-    <body>
+    <body class="min-h-full">
         <Nav client:load />
         <div id="swup" class="transition-fade">
             <slot />
+            <Footer client:visible />
         </div>
+
         <script>
             import Swup from "swup";
             import SwupFadeTheme from "@swup/fade-theme";

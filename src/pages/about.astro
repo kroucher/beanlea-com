@@ -1,8 +1,52 @@
 ---
-
-import Layout from "../layouts/Main.astro"
+import Layout from "../layouts/Main.astro";
+import ParticlesPage from "../components/About/Particles";
 ---
 
-<Layout title="Beanlea Web Development" description="Beanlea Web Development - based in Cairns, Australia">
-	<span>About page</span>
+<Layout
+	title="Beanlea Web Development"
+	description="Beanlea Web Development - based in Cairns, Australia"
+>
+	<div
+		class="flex flex-col w-full items-center justify-start min-h-[100vh] relative"
+	>
+		<div
+			class="absolute top-0 bottom-0 right-0 left-0 h-[100vh] w-full -z-10"
+		>
+			<ParticlesPage client:load />
+		</div>
+		<div
+			class="w-full flex items-center h-32 bg-neutral-100 dark:bg-slate-900 shadow-xl mt-10"
+		>
+			<span
+				class="text-3xl pl-3 sm:text-center w-full font-thin tracking-wider"
+			>
+				<span class="font-mono text-2xl sm:text-3xl text-blue-400"
+					>{`</>`}
+				</span>Who we are
+			</span>
+		</div>
+
+		<div
+			class="flex flex-col items-center justify-center space-y-10 text-base sm:text-lg sm:max-w-4xl mx-auto mt-10 bg-neutral-100 dark:bg-slate-900 rounded-md p-10"
+		>
+			<p class="p-3 text-left sm:text-center">
+				Beanlea Web Development is located in sunny Cairns, Queensland.
+				We specialise in developing websites that use modern JavaScript
+				technologies such as NextJS and AstroJS, and platforms like
+				Vercel and Planetscale to deliver high quality, responsive and
+				infinitely scalable sites that are accessible and performant.
+			</p>
+			<p class="p-3 text-right sm:text-center">
+				We make our websites blazingly fast by utilising content
+				delivery networks (CDNs) to make your website as close to your
+				users as possible. We also properly manage your website to
+				ensure it is always up to date and secure.
+			</p>
+			<p class="p-3 sm:text-center">
+				We are a small team of dedicated developers who are passionate
+				about creating modern and user friendly websites.
+			</p>
+		</div>
+	</div>
 </Layout>
