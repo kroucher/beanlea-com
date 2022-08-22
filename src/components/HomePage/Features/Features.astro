@@ -97,6 +97,7 @@ const features = [
                 {feature.link ? (
                   <span>
                     <a
+                      data-analytics={`"Stats Link", {"props": {"from": "Homepage", "to": "${feature.link}"}}`}
                       class="text-blue-500 dark:text-blue-400 underline decoration-dotted underline-offset-4"
                       href={feature.href}
                     >

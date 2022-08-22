@@ -70,6 +70,7 @@ export default function Nav() {
             </div>
             <div className="flex items-center justify-center sm:items-stretch sm:justify-between w-full">
               <a
+                data-analytics={`"Homepage", {"props": {"from": "Navbar"}}`}
                 href="/"
                 className="flex flex-col items-center justify-center dark:text-slate-50 text-slate-900 -mt-0.5 sm:mr-20"
               >
@@ -85,6 +86,7 @@ export default function Nav() {
                 <div className="flex items-center justify-center space-x-2 lg:space-x-4 w-full h-full">
                   {navigation.map((item) => (
                     <a
+                      data-analytics={`${item.name}, {"props": {"from": "Navbar", "to": "${item.href}"}}`}
                       key={item.name}
                       href={item.href}
                       className={classNames(
@@ -120,7 +122,12 @@ export default function Nav() {
                 )}
                 aria-current={item.current ? "page" : undefined}
               >
-                <a href={item.href}>{item.name}</a>
+                <a
+                  data-analytics={`${item.name}, {"props": {"from": "Navbar", "to": "${item.href}"}}`}
+                  href={item.href}
+                >
+                  {item.name}
+                </a>
               </Disclosure.Button>
             ))}
           </div>

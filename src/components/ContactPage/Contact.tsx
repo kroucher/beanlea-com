@@ -88,7 +88,7 @@ export default function ContactPage() {
               We will get back to you as soon as possible.
             </p>
             {/* back to home button */}
-            <a href="/">
+            <a data-analytics='"Home"' href="/">
               <HomeIcon
                 className="h-8 w-8 text-blue-500 mx-auto mt-10"
                 aria-hidden="true"
@@ -96,6 +96,7 @@ export default function ContactPage() {
             </a>
             <span>
               <a
+                data-analytics='"Home"'
                 href="/"
                 className="text-blue-400 underline decoration-dotted underline-offset-4 cursor-pointer"
               >
