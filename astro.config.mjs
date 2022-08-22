@@ -8,11 +8,11 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react(), sitemap()],
+  site: "https://www.beanlea.com",
   output: "server",
-  adapter: vercel() // vite: {
+  adapter: vercel(), // vite: {
   //   ssr: {
   //     external: ["svgo"],
   //   },
   // },
-
 });
