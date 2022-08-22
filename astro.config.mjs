@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/static";
 import react from "@astrojs/react";
-
+import robotsTxt from "astro-robots-txt";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
@@ -18,6 +18,7 @@ export default defineConfig({
         "https://www.beanlea.com/",
       ],
     }),
+    robotsTxt(),
   ],
   site: "https://www.beanlea.com",
   output: "server",
