@@ -15,6 +15,7 @@ specifiers:
   '@swup/fade-theme': ^1.0.5
   '@swup/head-plugin': ^1.2.1
   '@swup/scripts-plugin': ^1.1.0
+  '@swup/scroll-plugin': ^1.3.0
   '@swup/slide-theme': ^1.0.5
   '@tailwindcss/forms': ^0.5.2
   '@types/react': ^18.0.17
@@ -51,6 +52,7 @@ dependencies:
   '@sendgrid/mail': 7.7.0
   '@swup/head-plugin': 1.2.1
   '@swup/scripts-plugin': 1.1.0
+  '@swup/scroll-plugin': 1.3.0
   '@swup/slide-theme': 1.0.5
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.8
   astro-icon: 0.7.3
@@ -764,6 +766,14 @@ packages:
     resolution: {integrity: sha512-/2V5cUrmzxxZH91bBk0WjsWMJhjKhb32wZ41Sw/HXAUf2gLvqebvW6Lw98HJsagNXxVqqjmzTDIfdbHGwVsG/w==}
     dependencies:
       '@swup/plugin': 1.0.1
+    dev: false
+
+  /@swup/scroll-plugin/1.3.0:
+    resolution: {integrity: sha512-PUwYH4vIfQoXAbHgkVMygpURkGcLLrVDL7/dNkaXUysoclJsHsaHCve9IUlL+WX1D2gXIgB255L2XMKm4dKJow==}
+    dependencies:
+      '@swup/plugin': 1.0.1
+      scrl: 1.0.0
+      swup: 2.0.18
     dev: false
 
   /@swup/slide-theme/1.0.5:
@@ -1500,6 +1510,12 @@ packages:
 
   /defined/1.0.0:
     resolution: {integrity: sha512-Y2caI5+ZwS5c3RiNDJ6u53VhQHv+hHKwhkI1iHvceKUHw9Df6EK2zRLfjejRgMuCuxK7PfSWIMwWecceVvThjQ==}
+
+  /delegate-it/3.0.1:
+    resolution: {integrity: sha512-XU8H4pjDGBW74hFIbjdLPnvtU3HF3P9bbZvoFBSBLb5JgNaTkRb/2lvC1V+9kmZsxVR0kad4bU3rYhQ/4Ij+Gw==}
+    dependencies:
+      typed-query-selector: 2.6.1
+    dev: false
 
   /delegate/3.1.3:
     resolution: {integrity: sha512-I6ghVShFr7M6Z7OG+NhfV/VM0g5rHYcMYFNDlgTE/biDrPZ6PtfbSXgfWD/aGi/N2n1/YVU9gYjqZlQqRvLckg==}
@@ -3941,6 +3957,10 @@ packages:
     dependencies:
       loose-envify: 1.4.0
 
+  /scrl/1.0.0:
+    resolution: {integrity: sha512-nTS2W6UyxYfvOOjeXGXM1j140bm2ZUIjt0mEyGUHecFz2zU1CMYJ71dWPdlnSJR2mYOojY1R5qpo4Fi83O7tog==}
+    dev: false
+
   /scrollmagic/2.0.8:
     resolution: {integrity: sha512-UYXEGBPVLziovXl3FjHGkY9c4UXKUKopIdXwWR2JapWxCo0U345wYegi7rcsv5vHf/ktc1bSNWy4QRFiV+Yccw==}
     engines: {node: '>=0.10.x'}
@@ -4196,6 +4216,14 @@ packages:
     requiresBuild: true
     dependencies:
       delegate: 3.1.3
+      opencollective-postinstall: 2.0.3
+    dev: false
+
+  /swup/2.0.18:
+    resolution: {integrity: sha512-EvmvDQPhEdPbDIYxaVDTU0Fz1yONvP1WcYA28zuFIz5ocyGH8vE9+Bth2Lum9vIgMAYgvwm+uu/ru1es/M3S9g==}
+    requiresBuild: true
+    dependencies:
+      delegate-it: 3.0.1
       opencollective-postinstall: 2.0.3
     dev: false
 
@@ -4605,6 +4633,10 @@ packages:
     resolution: {integrity: sha512-UKCINsd4qiATXD6OIlnQw9t1ux/n2ld+Nl0kzPbCONhCaUIS/BhJbNw14w6584HCQWf3frBK8vmWnGZq/sbPHQ==}
     engines: {node: '>=12.20'}
     dev: true
+
+  /typed-query-selector/2.6.1:
+    resolution: {integrity: sha512-nzzcDrI0nncM5XTNyqeG7MrcXTx8lelUtNlTP+NvpnOfRzApyr+ZW4H/FoOaPfzmjn++Tf0ZxXpBN7Q3FN3ERw==}
+    dev: false
 
   /typescript/4.6.4:
     resolution: {integrity: sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==}

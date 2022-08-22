@@ -28,7 +28,7 @@ import "../styles/global.css";
         />
     </head>
 
-    <body class="min-h-full">
+    <body class="min-h-full" onload="window.scrollTo(0, 0)">
         <Nav client:load />
         <div id="swup" class="transition-fade">
             <slot />
@@ -39,9 +39,12 @@ import "../styles/global.css";
             import Swup from "swup";
             import SwupFadeTheme from "@swup/fade-theme";
             import SwupHeadPlugin from "@swup/head-plugin";
+            import SwupScrollPlugin from "@swup/scroll-plugin";
             const swup = new Swup({
+                animateHistoryBrowsing: false,
                 plugins: [
                     new SwupFadeTheme(),
+                    new SwupScrollPlugin(),
                     new SwupHeadPlugin({
                         persistAssets: true,
                     }),
