@@ -2,7 +2,6 @@ import { ComponentType, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import MobileMenuButton from "./MobileMenuButton";
 import ThemeButton from "./ThemeButton";
-import getCurrentUrl from "swup/lib/helpers/getCurrentUrl.js";
 
 export type ExtractProps<T> = T extends ComponentType<infer P> ? P : T;
 
@@ -50,18 +49,7 @@ function useScrollDirection() {
   return scrollDirection;
 }
 
-const getCurrentURL = () => {
-  const { pathname } = window.location;
-  return pathname.replace(/^\//, "");
-};
-
 export default function Nav() {
-  const [thisURL, setThisURL] = useState("");
-  useEffect(() => {
-    setThisURL(getCurrentURL());
-  }, []);
-  console.log(getCurrentUrl());
-
   const scrollDirection = useScrollDirection();
   return (
     <div
