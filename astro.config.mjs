@@ -7,7 +7,18 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), sitemap()],
+  integrations: [
+    tailwind(),
+    react(),
+    sitemap({
+      customPages: [
+        "https://www.beanlea.com/about",
+        "https://www.beanlea.com/contact",
+        "https://www.beanlea.com/showcase",
+        "https://www.beanlea.com/",
+      ],
+    }),
+  ],
   site: "https://www.beanlea.com",
   output: "server",
   adapter: vercel(), // vite: {
