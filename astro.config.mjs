@@ -22,7 +22,10 @@ export default defineConfig({
   ],
   site: "https://www.beanlea.com",
   output: "server",
-  adapter: vercel(), // vite: {
+  adapter: vercel(),
+  experimental: {
+    integrations: true,
+  }, // vite: {
   //   ssr: {
   //     external: ["svgo"],
   //   },
