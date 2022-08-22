@@ -29,7 +29,7 @@ const { title, description, image, next, prev, canonicalURL, url } =
     </head>
 
     <body class="min-h-full" onload="window.scrollTo(0, 0)">
-        <Nav client:only="react" />
+        <Nav client:load />
         <div id="swup" class="transition-fade">
             <slot />
             <Footer />
