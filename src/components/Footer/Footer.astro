@@ -1,52 +1,26 @@
----
-import Icon from "astro-icon";
-
-/* This example requires Tailwind CSS v2.0+ */
-const navigation = [
-  {
-    name: "Facebook",
-    href: "#",
-    icon: "bi:facebook",
-  },
-  {
-    name: "Instagram",
-    href: "#",
-    icon: "bi:instagram",
-  },
-  {
-    name: "Twitter",
-    href: "#",
-    icon: "bi:twitter",
-  },
-  {
-    name: "GitHub",
-    href: "#",
-    icon: "bi:github",
-  },
-  {
-    name: "Dribbble",
-    href: "#",
-    icon: "bi:dribbble",
-  },
-];
----
-
 <footer class="bg-neutral-100 dark:bg-slate-900">
   <div
     class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8"
   >
     <div class="flex justify-center space-x-6 md:order-2">
-      {
-        navigation.map((item) => (
-          <a
-            href={item.href}
-            class="text-slate-900 dark:text-neutral-100 hover:text-white dark:hover:text-neutral-200 transition duration-150 ease-in-out"
-          >
-            <span class="sr-only">{item.name}</span>
-            <Icon name={item.icon} class="h-6 w-6" aria-hidden="true" />
-          </a>
-        ))
-      }
+      <a
+        href="/"
+        class="flex flex-col items-center justify-center dark:text-slate-50 text-slate-900 -mt-0.5 sm:mr-20"
+      >
+        <div class="flex items-center justify-center">
+          <h1 class="font-mono text-2xl sm:text-3xl -mb-3 mx-2.5 text-blue-400">
+            {`</>`}
+          </h1>
+          <h1 class="font-kumar text-xl sm:text-3xl pt-1.5 sm:pt-3">
+            {`Beanlea`}
+          </h1>
+        </div>
+        <span
+          class="text-xs sm:text-sm -mt-2.5 -mr-16 sm:-mt-3 sm:-mr-12 font-semibold"
+        >
+          Web Development
+        </span>
+      </a>
     </div>
     <div class="mt-8 md:mt-0 md:order-1">
       <p class="text-center text-base text-gray-400">
