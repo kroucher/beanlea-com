@@ -6,7 +6,6 @@ import { theme } from "../../stores/themeStore";
 
 const ThemeButton = () => {
   const $theme = useStore(theme);
-  console.log($theme);
 
   const handleClick = () => {
     theme.set($theme === "light" ? "dark" : "light");

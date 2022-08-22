@@ -57,8 +57,6 @@ export default function ContactPage() {
     const result = await trigger(undefined, {
       shouldFocus: true,
     });
-    console.log(result);
-    console.log(JSON.stringify(values, null, 2));
     if (result) {
       setSendingEmail(true);
       try {

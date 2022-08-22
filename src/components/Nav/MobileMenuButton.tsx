@@ -11,8 +11,6 @@ export default function MobileMenu() {
   return (
     <Disclosure.Button
       onClick={() => {
-        console.log("clicked");
-        console.log($isMenuOpen);
         isMenuOpen.set(!$isMenuOpen);
       }}
       className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"

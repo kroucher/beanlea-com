@@ -2,6 +2,7 @@ import { ComponentType, useEffect, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import MobileMenuButton from "./MobileMenuButton";
 import ThemeButton from "./ThemeButton";
+import getCurrentUrl from "swup/lib/helpers/getCurrentUrl.js";
 
 export type ExtractProps<T> = T extends ComponentType<infer P> ? P : T;
 
@@ -49,9 +50,19 @@ function useScrollDirection() {
   return scrollDirection;
 }
 
+const getCurrentURL = () => {
+  const { pathname } = window.location;
+  return pathname.replace(/^\//, "");
+};
+
 export default function Nav() {
+  const [thisURL, setThisURL] = useState("");
+  useEffect(() => {
+    setThisURL(getCurrentURL());
+  }, []);
+  console.log(getCurrentUrl());
+
   const scrollDirection = useScrollDirection();
-  console.log(scrollDirection);
   return (
     <div
       className={`sticky z-50 h-max overflow-x-hidden  ${
@@ -89,7 +100,7 @@ export default function Nav() {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current
+                        "this" === item.href
                           ? "bg-slate-900 text-white"
                           : "text-slate-900 dark:text-neutral-100 hover:bg-slate-700 hover:text-white",
                         "px-3 py-2 rounded-md text-xs lg:text-sm font-medium whitespace-nowrap"
