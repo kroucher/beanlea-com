@@ -28,9 +28,9 @@ const { title, description, image, next, prev, canonicalURL, url } =
         />
     </head>
 
-    <body class="min-h-full" onload="window.scrollTo(0, 0)">
+    <body class="min-h-full">
         <Nav client:load />
-        <div id="swup" class="transition-fade">
+        <div id="swup" class="transition-fade h-full">
             <slot />
             <Footer />
         </div>
