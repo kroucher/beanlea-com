@@ -85,7 +85,7 @@ export default function Nav() {
                 <div className="flex items-center justify-center space-x-2 lg:space-x-4 w-full h-full">
                   {navigation.map((item) => (
                     <a
-                      data-analytics={`${item.name}, {"props": {"from": "Navbar"}}`}
+                      data-analytics={`"Link", {"props": {"from": "Navbar", "to": "${item.name}"}}`}
                       key={item.name}
                       href={item.href}
                       className={classNames(
