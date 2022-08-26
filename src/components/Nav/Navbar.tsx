@@ -53,11 +53,10 @@ export default function Nav() {
   const scrollDirection = useScrollDirection();
   return (
     <div
-      className={`sticky z-50 h-max overflow-x-hidden  ${
-        scrollDirection === "down"
-          ? "-top-24 transition-all duration-700"
-          : "top-0 transition-all duration-700"
-      }`}
+      className={`sticky z-50 h-max overflow-x-hidden  ${scrollDirection === "down"
+        ? "-top-24 transition-all duration-700"
+        : "top-0 transition-all duration-700"
+        }`}
     >
       <MainDisclosure
         as="div"
@@ -86,7 +85,7 @@ export default function Nav() {
                 <div className="flex items-center justify-center space-x-2 lg:space-x-4 w-full h-full">
                   {navigation.map((item) => (
                     <a
-                      data-analytics={`${item.name}, {"props": {"from": "Navbar", "to": "${item.href}"}}`}
+                      data-analytics={`${item.name}, {"props": {"from": "Navbar"}}`}
                       key={item.name}
                       href={item.href}
                       className={classNames(
