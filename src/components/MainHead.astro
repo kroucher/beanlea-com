@@ -2,32 +2,38 @@
 import "../styles/global.css";
 import "@fontsource/kumar-one";
 
-const {
-	title = "Beanlea Web Development",
-	description = "Beanlea Web Development - Cairns, Australia",
-} = Astro.props;
+const { title, description, url } = Astro.props;
+import OGImage from "/assets/ogimage.jpg";
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
+<meta name="title" content={title} />
+<meta name="description" property="odescription" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
 <meta
 	name="keywords"
-	content="Web, Website, Developer, Web Design, Web Development, Cairns, Queensland, Australia, Javascript, NextJS, Astro, AstroJS, Make A Website"
+	content="Beanlea Web Development, Cairns, Australia, Web Development, Web Design, Web Hosting, Web Services"
 />
-<meta name="og:title" property="og:title" content={title} />
-<meta name="og:description" property="og:description" content={description} />
-<meta name="og:url" property="og:url" content={Astro.url.href} />
-<meta name="og:type" property="og:type" content="website" />
-<meta name="og:image" property="og:image" content="/assets/ogimage.jpg" />
-<meta name="og:image:url" property="og:image:url" content="/assets/ogimage.jpg"
-/>
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={OGImage} />
 <meta content="OpenGraph thumbnail description." property="og:image:alt" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta name="twitter:card" content="summary_large_image" />
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://www.beanlea.com/" />
+<meta property="twitter:title" content="Home - Beanlea Web Development" />
+<meta
+	property="twitter:description"
+	content="Beanlea Web Development - based in Cairns, Australia"
+/>
+<meta property="twitter:image" content={OGImage} />
 <meta content="index, follow" name="robots" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <script is:inline>
