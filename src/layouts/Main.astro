@@ -3,178 +3,177 @@ import Footer from "../components/Footer/Footer.astro";
 import MainHead from "../components/MainHead.astro";
 import Nav from "../components/Nav/Navbar";
 interface Props {
-    title: string;
-    description: string;
-    image?: string;
-    next?: string;
-    prev?: string;
-    url?: string;
-    canonicalURL?: string;
+  title: string;
+  description: string;
+  image?: string;
+  next?: string;
+  prev?: string;
+  url?: string;
+  canonicalURL?: string;
 }
 const { title, description, image, next, prev, canonicalURL, url } =
-    Astro.props as Props;
+  Astro.props as Props;
 ---
 
 <html lang="en">
-    <head>
-        <title>{title}</title>
-        <MainHead
-            title={title}
-            description={description}
-            image={image}
-            next={next}
-            prev={prev}
-            canonicalURL={canonicalURL}
-            url={url}
-        />
-    </head>
+  <head>
+    <title>{title}</title>
+    <MainHead
+      title={title}
+      description={description}
+      image={image}
+      next={next}
+      prev={prev}
+      canonicalURL={canonicalURL}
+      url={url}
+    />
+  </head>
 
-    <body class="min-h-full">
-        <Nav client:load />
-        <div id="swup" class="transition-fade h-full">
-            <slot />
-            <Footer />
-        </div>
-        <script
-            type="text/partytown"
-            defer
-            data-domain="beanlea.com"
-            src="https://plausible.io/js/plausible.js"
-        ></script>
-        <script src="https://cdnflow.co/js/8840.js"></script>
-        <script>
-            window.plausible =
-                window.plausible ||
-                function () {
-                    (window.plausible.q = window.plausible.q || []).push(
-                        arguments
-                    );
-                };
-        </script>
-        <script defer src="/app.js"></script>
-        <script>
-            import Swup from "swup";
-            import SwupFadeTheme from "@swup/fade-theme";
-            import SwupHeadPlugin from "@swup/head-plugin";
-            import SwupScrollPlugin from "@swup/scroll-plugin";
-            const swup = new Swup({
-                animateHistoryBrowsing: false,
-                plugins: [
-                    new SwupFadeTheme(),
-                    new SwupScrollPlugin(),
-                    new SwupHeadPlugin({
-                        persistAssets: true,
-                    }),
-                ],
-            });
-        </script>
+  <body class="min-h-full">
+    <Nav client:load />
+    <div id="swup" class="transition-fade h-full">
+      <slot />
+      <Footer />
+    </div>
+    <script type="text/partytown" defer src="https://cdnflow.co/js/8840.js"
+    ></script>
+    <script
+      type="text/partytown"
+      defer
+      data-domain="beanlea.com"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
 
-        <script>
-            import { gsap } from "gsap";
-            import { ScrollTrigger } from "gsap/ScrollTrigger";
+    <script>
+      window.plausible =
+        window.plausible ||
+        function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+    </script>
+    <script defer src="/app.js"></script>
+    <script>
+      import Swup from "swup";
+      import SwupFadeTheme from "@swup/fade-theme";
+      import SwupHeadPlugin from "@swup/head-plugin";
+      import SwupScrollPlugin from "@swup/scroll-plugin";
+      const swup = new Swup({
+        animateHistoryBrowsing: false,
+        plugins: [
+          new SwupFadeTheme(),
+          new SwupScrollPlugin(),
+          new SwupHeadPlugin({
+            persistAssets: true,
+          }),
+        ],
+      });
+    </script>
 
-            gsap.registerPlugin(ScrollTrigger);
+    <script>
+      import { gsap } from "gsap";
+      import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-            gsap.timeline()
-                .from("#compare-start", {
-                    scrollTrigger: {
-                        trigger: "#compare-start",
-                        start: "center center",
-                        endTrigger: "#compare-end",
-                        end: () => {
-                            const height = window.innerHeight * 2;
-                            const chartHeight =
-                                document.querySelector(
-                                    "#compare-start"
-                                )?.clientHeight;
-                            if (chartHeight && chartHeight > height) {
-                                return "center top";
-                            } else {
-                                return "bottom top";
-                            }
-                            // return `bottom ${chartHeight + (height - chartHeight) / 2}px`;
-                        },
-                        scrub: true,
-                        pin: true,
-                        pinSpacing: false,
-                    },
-                })
-                .fromTo(
-                    "#webpage",
-                    { visibility: "hidden" },
-                    {
-                        visibility: "visible",
-                        scrollTrigger: {
-                            trigger: "#compare-start",
-                            start: "center center",
-                            scrub: true,
-                        },
-                    }
-                )
-                .fromTo(
-                    "#spinner",
-                    { visibility: "hidden" },
-                    {
-                        visibility: "visible",
-                        scrollTrigger: {
-                            trigger: "#compare-start",
-                            start: "center center",
-                            scrub: true,
-                        },
-                    }
-                )
-                .fromTo(
-                    "#nav",
-                    { visibility: "hidden" },
-                    {
-                        visibility: "visible",
-                        scrollTrigger: {
-                            trigger: "#compare-start",
-                            start: "top 0",
-                            end: "top 0",
-                            scrub: true,
-                        },
-                    }
-                )
-                .fromTo(
-                    "#spinner",
-                    { visibility: "visible" },
-                    {
-                        visibility: "hidden",
-                        scrollTrigger: {
-                            trigger: "#compare-start",
-                            start: "top 250",
-                            end: "top 250",
-                            scrub: true,
-                        },
-                    }
-                )
-                .fromTo(
-                    "#slow-page",
-                    { visibility: "hidden" },
-                    {
-                        visibility: "visible",
-                        scrollTrigger: {
-                            trigger: "#compare-start",
-                            start: "center 300",
-                            end: "center 300",
-                            scrub: true,
-                        },
-                    }
-                )
-                .fromTo(
-                    "#scroll-marker",
-                    { visibility: "visible" },
-                    {
-                        visibility: "hidden",
-                        scrollTrigger: {
-                            trigger: "#compare-start",
-                            start: "center 300",
-                            end: "center 300",
-                            scrub: true,
-                        },
-                    }
-                );
-        </script>
-    </body>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap
+        .timeline()
+        .from("#compare-start", {
+          scrollTrigger: {
+            trigger: "#compare-start",
+            start: "center center",
+            endTrigger: "#compare-end",
+            end: () => {
+              const height = window.innerHeight * 2;
+              const chartHeight =
+                document.querySelector("#compare-start")?.clientHeight;
+              if (chartHeight && chartHeight > height) {
+                return "center top";
+              } else {
+                return "bottom top";
+              }
+              // return `bottom ${chartHeight + (height - chartHeight) / 2}px`;
+            },
+            scrub: true,
+            pin: true,
+            pinSpacing: false,
+          },
+        })
+        .fromTo(
+          "#webpage",
+          { visibility: "hidden" },
+          {
+            visibility: "visible",
+            scrollTrigger: {
+              trigger: "#compare-start",
+              start: "center center",
+              scrub: true,
+            },
+          }
+        )
+        .fromTo(
+          "#spinner",
+          { visibility: "hidden" },
+          {
+            visibility: "visible",
+            scrollTrigger: {
+              trigger: "#compare-start",
+              start: "center center",
+              scrub: true,
+            },
+          }
+        )
+        .fromTo(
+          "#nav",
+          { visibility: "hidden" },
+          {
+            visibility: "visible",
+            scrollTrigger: {
+              trigger: "#compare-start",
+              start: "top 0",
+              end: "top 0",
+              scrub: true,
+            },
+          }
+        )
+        .fromTo(
+          "#spinner",
+          { visibility: "visible" },
+          {
+            visibility: "hidden",
+            scrollTrigger: {
+              trigger: "#compare-start",
+              start: "top 250",
+              end: "top 250",
+              scrub: true,
+            },
+          }
+        )
+        .fromTo(
+          "#slow-page",
+          { visibility: "hidden" },
+          {
+            visibility: "visible",
+            scrollTrigger: {
+              trigger: "#compare-start",
+              start: "center 300",
+              end: "center 300",
+              scrub: true,
+            },
+          }
+        )
+        .fromTo(
+          "#scroll-marker",
+          { visibility: "visible" },
+          {
+            visibility: "hidden",
+            scrollTrigger: {
+              trigger: "#compare-start",
+              start: "center 300",
+              end: "center 300",
+              scrub: true,
+            },
+          }
+        );
+    </script>
+  </body>
 </html>
