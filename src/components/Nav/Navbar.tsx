@@ -34,7 +34,7 @@ function useScrollDirection() {
         if (direction === "down") {
           setTimeout(() => {
             setScrollDirection(direction);
-          }, 1000);
+          }, 3000);
         } else {
           setScrollDirection(direction);
         }
